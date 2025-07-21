@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #22c55e;
+  background: white;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+  color: #22c55e;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #22c55e;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+:root {
+  --text-color: #2E2B41;
+}
+
+.parent:has(input:focus) label {
+  background-color: #2E2B41; /* or your "text" color */
+  color: white;
+}
