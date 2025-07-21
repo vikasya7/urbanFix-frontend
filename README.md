@@ -1,31 +1,36 @@
 # 🌆 UrbanFix Frontend
 
-The official frontend for **UrbanFix** — a modern civic engagement platform that empowers citizens to report, track, and resolve local city issues like potholes, broken streetlights, water leaks, and more.
+A modern civic engagement platform that empowers citizens to report, track, and resolve local city issues like potholes, broken streetlights, water leaks, and more.
 
-🔗 **Live Backend**: [urbanfix-backend.onrender.com](https://urbanfix-backend.onrender.com)
+This is the **official frontend** for UrbanFix, built with **React + Vite**.
+
+---
+
+## 🔗 Live Backend
+[https://urbanfix-backend.onrender.com](https://urbanfix-backend.onrender.com)
 
 ---
 
 ## 🚀 Features
 
-- 📸 Snap, Send & Solve: Easy 3-step issue reporting
-- 🔐 JWT Authentication (Login / Signup / Logout)
-- 🗂️ "My Issues" dashboard
+- 📸 **Snap, Send & Solve** – Easy 3-step issue reporting
+- 🔐 JWT Authentication – Login, Signup, Logout
+- 🗂️ “My Issues” Dashboard – View your submitted reports
 - 🌍 Location-aware reports
-- ☁️ Cloudinary image uploads
-- 🎨 Clean, responsive UI (mobile-friendly)
-- ⚡ Smooth scroll + animations
+- ☁️ Cloudinary Image Uploads
+- 🎨 Clean, Responsive UI (Mobile-friendly)
+- ⚡ Smooth scroll & animations (AOS / Framer Motion)
 
 ---
 
 ## 🧰 Tech Stack
 
-- **Frontend**: React.js + Vite
-- **Styling**: Tailwind CSS
-- **Routing**: React Router
-- **State Management**: React Context API
-- **HTTP**: Axios
-- **Animations**: Framer Motion / AOS
+- **Frontend:** React.js + Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router
+- **State Management:** React Context API
+- **HTTP:** Axios
+- **Animations:** AOS, Framer Motion
 
 ---
 
@@ -35,7 +40,7 @@ The official frontend for **UrbanFix** — a modern civic engagement platform th
 git clone https://github.com/vikasya7/urbanFix-frontend.git
 cd urbanFix-frontend
 npm install
-📄 License
-MIT © Vikas Yadav
+npm run dev
+
 
 
