@@ -1,12 +1,41 @@
-# React + Vite
+# 🌆 UrbanFix Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The official frontend for **UrbanFix** — a modern civic engagement platform that empowers citizens to report, track, and resolve local city issues like potholes, broken streetlights, water leaks, and more.
 
-Currently, two official plugins are available:
+🔗 **Live Backend**: [urbanfix-backend.onrender.com](https://urbanfix-backend.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📸 Snap, Send & Solve: Easy 3-step issue reporting
+- 🔐 JWT Authentication (Login / Signup / Logout)
+- 🗂️ "My Issues" dashboard
+- 🌍 Location-aware reports
+- ☁️ Cloudinary image uploads
+- 🎨 Clean, responsive UI (mobile-friendly)
+- ⚡ Smooth scroll + animations
+
+---
+
+## 🧰 Tech Stack
+
+- **Frontend**: React.js + Vite
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
+- **State Management**: React Context API
+- **HTTP**: Axios
+- **Animations**: Framer Motion / AOS
+
+---
+
+## 📦 Setup Instructions
+
+```bash
+git clone https://github.com/vikasya7/urbanFix-frontend.git
+cd urbanFix-frontend
+npm install
+📄 License
+MIT © Vikas Yadav
+
+
