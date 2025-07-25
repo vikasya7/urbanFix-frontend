@@ -9,10 +9,12 @@ const Step5Submit = ({ data, back,setData,next }) => {
   console.log("🧩 Step5Submit component mounted");
 
   const token = localStorage.getItem("token");
+  console.log("🪪 Token from localStorage:", token);
+
 
   const handleSubmit = async () => {
     console.log('🧨 handleSubmit triggered');
-    alert("Issue submitted successfully!");
+    //alert("Issue submitted successfully!");
 
     try {
       const formData = new FormData();
