@@ -17,6 +17,7 @@ const Step5Submit = ({ data, back,setData,next }) => {
   const handleSubmit = async () => {
     console.log('🧨 handleSubmit triggered');
     //alert("Issue submitted successfully!");
+    const navigate = useNavigate();
 
     try {
       const formData = new FormData();
