@@ -45,6 +45,7 @@ const Navbar = () => {
     }, 100);
     removeSidebar();
   };
+  console.log("Navbar Auth State:", { user, isLogged, loading });
 
   return (
     <div className='w-full m-0 p-0 overflow-hidden'>
