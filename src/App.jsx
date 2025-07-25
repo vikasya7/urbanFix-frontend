@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom'; // ✅ import BrowserRouter
+import { Route, Routes, BrowserRouter } from 'react-router-dom'; // ✅ Add BrowserRouter
 import './App.css';
 import './index.css';
 
@@ -13,10 +13,8 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import ReportIssueWizard from './pages/ReportIssueWizard';
 import { AuthProvider } from './context/AuthContext';
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -25,13 +23,13 @@ function App() {
     AOS.init({
       duration: 800,
       offset: 100,
-      once: true,
+      once: true
     });
   }, []);
 
   return (
     <AuthProvider>
-      <BrowserRouter> {/* ✅ fix added here */}
+      <BrowserRouter> {/* ✅ Needed for routing and context to behave */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -50,5 +48,6 @@ function App() {
 }
 
 export default App;
+
 
 
