@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 console.log("🧠 Step5Submit.jsx loaded");
 
 const Step5Submit = ({ data, back,setData,next }) => {
+  const navigate = useNavigate(); // ✅ Correct position
+
   console.log("📦 Data received in Step5Submit:", data);
 
   console.log("🧩 Step5Submit component mounted");
@@ -17,7 +19,7 @@ const Step5Submit = ({ data, back,setData,next }) => {
   const handleSubmit = async () => {
     console.log('🧨 handleSubmit triggered');
     //alert("Issue submitted successfully!");
-    const navigate = useNavigate();
+   
 
     try {
       const formData = new FormData();
