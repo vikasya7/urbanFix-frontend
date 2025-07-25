@@ -29,7 +29,7 @@ function App() {
 
   return (
     <AuthProvider>
-      <BrowserRouter> {/* ✅ Needed for routing and context to behave */}
+      
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -42,7 +42,7 @@ function App() {
           <Route path='/admin' element={<AdminDashboard />} />
         </Routes>
         <ToastContainer />
-      </BrowserRouter>
+      
     </AuthProvider>
   );
 }
