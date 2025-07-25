@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom'; // ✅ Add BrowserRouter
+import { Route, Routes } from 'react-router-dom'; // ✅ Remove BrowserRouter here
 import './App.css';
 import './index.css';
 
@@ -12,7 +12,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import ReportIssueWizard from './pages/ReportIssueWizard';
-import { AuthProvider } from './context/AuthContext';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ToastContainer } from 'react-toastify';
@@ -28,26 +28,25 @@ function App() {
   }, []);
 
   return (
-    <AuthProvider>
-      
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/contact' element={<ContactUs />} />
-          <Route path='/my-issues' element={<MyIssue />} />
-          <Route path='/issue/:id' element={<IssueDetail />} />
-          <Route path='/report' element={<ReportIssueWizard />} />
-          <Route path='/admin' element={<AdminDashboard />} />
-        </Routes>
-        <ToastContainer />
-      
-    </AuthProvider>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/contact' element={<ContactUs />} />
+        <Route path='/my-issues' element={<MyIssue />} />
+        <Route path='/issue/:id' element={<IssueDetail />} />
+        <Route path='/report' element={<ReportIssueWizard />} />
+        <Route path='/admin' element={<AdminDashboard />} />
+      </Routes>
+      <ToastContainer />
+    </>
   );
 }
 
 export default App;
+
 
 
 
