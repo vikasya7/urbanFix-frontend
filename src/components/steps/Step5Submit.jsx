@@ -8,8 +8,8 @@ const Step5Submit = ({ data, back,setData,next }) => {
 
   console.log("🧩 Step5Submit component mounted");
 
-  const token = localStorage.getItem("token");
-  console.log("🪪 Token from localStorage:", token);
+  // const token = localStorage.getItem("token");
+  // console.log("🪪 Token from localStorage:", token);
 
 
   const handleSubmit = async () => {
@@ -25,10 +25,19 @@ const Step5Submit = ({ data, back,setData,next }) => {
       formData.append('location', data.address);
       formData.append('title', data.title);
 
-      const res = await api.post("/report", formData, {
+     
+
+      // const res = await api.post("/report", formData, {
+        
+      //   headers: {
+        
+      //     "Content-Type": "multipart/form-data",
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      // });
+       const res = await api.post("/report", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${token}`,
         },
       });
 
