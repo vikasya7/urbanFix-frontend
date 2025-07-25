@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';  // ✅ fix here
-import { Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom'; // ✅ import BrowserRouter
 import './App.css';
 import './index.css';
 
@@ -13,43 +13,42 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import ReportIssueWizard from './pages/ReportIssueWizard';
 import { AuthProvider } from './context/AuthContext';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
-
-
-
-
 function App() {
-  
-     useEffect(() => {
+  useEffect(() => {
     AOS.init({
-      duration: 800,      // Duration of animation (ms)
-      offset: 100,        // Offset from the top to start animation
-      once: true          // Whether animation should happen only once
+      duration: 800,
+      offset: 100,
+      once: true,
     });
-    }, []);
+  }, []);
+
   return (
     <AuthProvider>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/contact' element={<ContactUs />} />
-        <Route path='/my-issues' element={<MyIssue />} /> 
-        <Route path='/issue/:id' element={<IssueDetail />} />
-        <Route path='/report' element={<ReportIssueWizard />} />
-        <Route path='/admin' element={<AdminDashboard />} />
-      </Routes>
-       <ToastContainer />
+      <BrowserRouter> {/* ✅ fix added here */}
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/contact' element={<ContactUs />} />
+          <Route path='/my-issues' element={<MyIssue />} />
+          <Route path='/issue/:id' element={<IssueDetail />} />
+          <Route path='/report' element={<ReportIssueWizard />} />
+          <Route path='/admin' element={<AdminDashboard />} />
+        </Routes>
+        <ToastContainer />
+      </BrowserRouter>
     </AuthProvider>
   );
 }
 
 export default App;
+
 
